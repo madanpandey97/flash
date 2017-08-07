@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+    <br><br> <br><br>
+
+
+    <main class="exc-main">
+        <div class="exc-page-content blog">
+            <div class="container">
+                <div class="exc-page-title">
+                    <h1>BLOG</h1>
+                    <ol class="breadcrumb">
+                        <li><a href="{% url 'aloautoworks:index' %}">Home</a></li>
+                        <li class="active">Blog</li>
+                    </ol>
+                </div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="blog-listing-page">
+                            <ul class="blog-listing">
+                                <li>
+                                    <div class="exc-blog-post">
+                                        <figure>
+                                            <a href="{% url 'aloautoworks:blog_detail_alo' %}"><img src="{% static 'images/blog1.jpg' %}" alt=""></a>
+                                        </figure>
+                                        <div class="exc-post-header">
+                                            <div class="post-date"><i class="fa fa-calendar"></i>01/08/2017</div>
+                                            <h5><a href="{% url 'aloautoworks:blog_detail_alo' %}">Car and Driver</a></h5>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                                
+                                <li>
+                                    <div class="exc-blog-post">
+                                        <figure>
+                                            <a href="{% url 'aloautoworks:blog_detail_alo' %}"><img src="{% static 'images/blog4.jpg' %}" alt=""></a>
+                                        </figure>
+                                        <div class="exc-post-header">
+                                            <div class="post-date"><i class="fa fa-calendar"></i>01/08/2017</div>
+                                            <h5><a href="{% url 'aloautoworks:blog_detail_alo' %}">Oil, Lube and Filters.</a></h5>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="exc-blog-post">
+                                        <figure>
+                                            <a href="{% url 'aloautoworks:blog_detail_alo' %}"><img src="{% static 'images/blog5.jpg' %}" alt=""></a>
+                                        </figure>
+                                        <div class="exc-post-header">
+                                            <div class="post-date"><i class="fa fa-calendar"></i>01/08/2017</div>
+                                            <h5><a href="{% url 'aloautoworks:blog_detail_alo' %}">Car for College Students</a></h5>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="exc-blog-post">
+                                        <figure>
+                                            <a href="{% url 'aloautoworks:blog_detail_alo' %}"><img src="{% static 'images/blog6.jpg' %}" alt=""></a>
+                                        </figure>
+                                        <div class="exc-post-header">
+                                            <div class="post-date"><i class="fa fa-calendar"></i>01/08/2017</div>
+                                            <h5><a href="{% url 'aloautoworks:blog_detail_alo' %}">Best Selling Cars</a></h5>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                                
+                               
+                                
+                            </ul>
+                        </div>
+
+                        <!-- Post Navigation -->
+                        <nav class="pagination">
+                            <ul>
+                                <li><a href="#">«</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">»</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <aside class="col-md-3">
+                        <!-- Widget Search -->
+                        <div class="widget widget_search">
+                            <h3>SEARCH</h3>
+                            <form id="searchform">
+                                <div class="search-wrap">
+                                    <label class="screen-reader-text" for="s">Search for:</label>
+                                    <input class="form-control" placeholder="Search Any Keyword" type="text" value="" name="s" id="s">
+                                    <input type="submit" id="searchsubmit" value="">
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Widget Calendar -->
+                        <div class="widget widget_calendar">
+                            <h3>CALENDAR</h3>
+                            <div id="calendar_wrap">
+                                <table id="wp-calendar">
+                                    <caption>AUGUST 2017</caption>
+                                    <thead>
+                                        <tr>
+                                            <th title="Monday" scope="col">M</th>
+                                            <th title="Tuesday" scope="col">T</th>
+                                            <th title="Wednesday" scope="col">W</th>
+                                            <th title="Thursday" scope="col">T</th>
+                                            <th title="Friday" scope="col">F</th>
+                                            <th title="Saturday" scope="col">S</th>
+                                            <th title="Sunday" scope="col">S</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <td id="prev" colspan="3"><a title="View posts for October 2012" href="http://roy/sound_rock/?m=201210">« Oct</a></td>
+                                            <td class="pad">&nbsp;</td>
+                                            <td class="pad" id="next" colspan="3">&nbsp;</td>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                          <td class="pad" colspan="3">&nbsp;</td><td>1</td><td>2</td><td>3</td><td>4</td>
+                                        </tr>
+                                        <tr>
+                                          <td><a title="Hello world!" href="http://roy/sound_rock/?m=20121105">5</a></td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td>
+                                        </tr>
+                                        <tr>
+                                          <td>12</td><td id="today">13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td>
+                                        </tr>
+                                        <tr>
+                                          <td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td>
+                                        </tr>
+                                        <tr>
+                                          <td>26</td><td>27</td><td>28</td><td>29</td><td>30</td>
+                                          <td colspan="2" class="pad">&nbsp;</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- Widget Twitter -->
+                       
+                        <!-- Widget Twitter -->
+                       <!-- Widget Twitter -->
+                        <div class="widget widget_tag_cloud">
+                            <h3>Twitter</h3>
+                        </div>
+                        <!-- Widget Tag Cloud -->
+                        <div class="widget widget_tag_cloud">
+                            <h3>Tags</h3>
+                            <div class="tagcloud">
+                                <a href="#">Oil</a>
+                                <a href="#">Brake</a>
+                                <a href="#">Suspension</a>
+                                <a href="#">Engine</a>
+                                <a href="#">AC</a>
+                                <a href="#">Filter</a>
+                                <a href="#">Tyre</a>
+                                <a href="#">Accidenal repair</a>
+                                <a href="#">Tuning</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Main Ends -->
+
+
+
+    <!-- Main Slider -->   {% endblock %}

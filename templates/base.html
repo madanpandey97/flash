@@ -1,0 +1,599 @@
+﻿
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>ALO AUTOWORKS</title>
+    <!-- Stylesheets -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+  
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="exc-header">
+        <!-- Topbar -->
+        <div class="exc-topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <nav class="exc-top-nav">
+                            <ul>
+                                <li><a href="{% url 'aloautoworks:index' %}">Home</a></li>
+                                <li><a href="{% url 'aloautoworks:services_alo' %}">Services</a></li>
+                                <li><a href="{% url 'aloautoworks:blogs_alo' %}">Blog</a></li>
+                                <li><a href="{% url 'aloautoworks:appointment' %}">Appointment</a></li>
+                                <li><a href="{% url 'aloautoworks:contact_alo' %}">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-sm-3">
+                        <ul class="exc-social-links">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar -->
+        <div class="exc-navbar">
+            <div class="container">
+                <div class="exc-brand">
+                    <a class="exc-logo" href="{% url 'aloautoworks:index' %}"><img src="{% static 'images/logo3.png' %}" alt="ALO AUTOWORKS" height="70" width="70" /></a>
+                    <ul class="exc-contact-info">
+                        <li class="phone-no">
+                            <i class="fa fa-phone"></i>
+                            <h6 class="info-title">Contact Us</h6>
+                            <span class="info-desc">+91-8717018534</span>
+                        </li>
+                        <li class="opening-time">
+                            <i class="fa fa-clock-o"></i>
+                            <h6 class="info-title">We are open</h6>
+                            <span class="info-desc">Mon to Sun: <span class="open-time">12:00AM</span>  - <span class="close-time">12:00PM</span></span>
+                        </li>
+                    </ul>
+                    <div class="exc-appointment">
+                        <a class="btn-group" href="{% url 'aloautoworks:appointment' %}">
+                            <span class="btn">Book a Service</span>
+                            <span class="btn btn-arrow">
+                                <span class="fa fa-angle-double-right"></span>
+                            </span>
+                        </a>
+                    </div>
+                    <a class="exc-menu-btn" href="#">
+                        <span class="menu-text">Menu</span>
+                        <span class="menu-icon"></span>
+                    </a>
+                </div>
+                <nav class="main-navigation">
+                    <ul>
+                        <li class="dropdown mega-dropdown">
+                            <a data-toggle="dropdown" href="#">BODY WORKS<span class="caret"></span></a>
+                            <div class="dropdown-menu">
+                                <div class="row">
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/car-body.png" alt="" /></a>
+                                        <h5><a href="#">Body Parts Replacement</a></h5>
+                                        <div class="price">STARTS FROM <span>Rs.199</span></div>
+                                    </div>
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/car-paint.png" alt="" /></a>
+                                        <h5><a href="#">Body Paint Services</a></h5>
+                                        <div class="price">STARTS FROM <span>Rs.299.99</span></div>
+                                    </div>
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/headlight.png" alt="" /></a>
+                                        <h5><a href="#">HEADLIGHT RESTORATION</a></h5>
+                                        <div class="price">STARTS FROM <span>Rs.159</span></div>
+                                    </div>
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/bulb.png" alt="" /></a>
+                                        <h5><a href="#">HEADLIGHT BULB INSTALLATION</a></h5>
+                                        <div class="price">STARTS FROM <span>Rs.99</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown mega-dropdown">
+                            <a data-toggle="dropdown" href="#">MAINTENANCE<span class="caret"></span></a>
+                            <div class="dropdown-menu">
+                                <div class="row">
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/headlight.png" alt="" /></a>
+                                        <h5><a href="#">HEADLIGHT RESTORATION</a></h5>
+                                        <div class="price">STARTS FROM <span>Rs.499</span></div>
+                                    </div>
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/bulb.png" alt="" /></a>
+                                        <h5><a href="#">BULB INSTALLATION</a></h5>
+                                        <div class="price">STARTS FROM <span>Rs.99</span></div>
+                                    </div>
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/airfilter.png" alt="" /></a>
+                                        <h5><a href="#">CABIN AIRFILTER INSTALLATION</a></h5>
+                                        <div class="price">STARTS FROM <span>RS.1299</span></div>
+                                    </div>
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/spring.png" alt="" /></a>
+                                        <h5><a href="#">SPRING MAINTENANCE PACKAGE</a></h5>
+                                        <div class="price">STARTS FROM <span>Rs.1999</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown mega-dropdown">
+                            <a data-toggle="dropdown" href="#">EVALUATIONS<span class="caret"></span></a>
+                            <div class="dropdown-menu">
+                                <div class="row">
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/car-ac.png" alt="" /></a>
+                                        <h5><a href="#">A/C System Leak Evaluation</a></h5>
+                                        <div class="price">STARTS FROM <span>Rs.1299</span></div>
+                                    </div>
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/steering.png" alt="" /></a>
+                                        <h5><a href="#">Steering and Suspension</a></h5>
+                                        <div class="price">STARTS FROM <span>Rs.499</span></div>
+                                    </div>
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/coolant.png" alt="" /></a>
+                                        <h5><a href="#">Coolant System Evaluation</a></h5>
+                                        <div class="price">STARTS FROM <span>Rs.1399</span></div>
+                                    </div>
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/evaluation.png" alt="" /></a>
+                                        <h5><a href="#">System Evaluation</a></h5>
+                                        <div class="price">STARTS FROM <span>Rs.1699</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown mega-dropdown">
+                            <a data-toggle="dropdown" href="#">Tyres<span class="caret"></span></a>
+                            <div class="dropdown-menu">
+                                <div class="row">
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/tyre-1.png" alt="" /></a>
+                                        <h5><a href="#">New Tyre Replacement</a></h5>
+                                        <div class="price">STARTS FROM <span>Rs.699</span></div>
+                                    </div>
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/tyre-2.png" alt="" /></a>
+                                        <h5><a href="#">Flat Tyre Repair</a></h5>
+                                        <div class="price">STARTS FROM <span>Rs.199</span></div>
+                                    </div>
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/tyre-3.png" alt="" /></a>
+                                        <h5><a href="#">Tyre Rotation</a></h5>
+                                        <div class="price">STARTS FROM <span>Rs.999</span></div>
+                                    </div>
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/tyre-4.png" alt="" /></a>
+                                        <h5><a href="#">Tyre Balancing</a></h5>
+                                        <div class="price">STARTS FROM <span>Rs.799</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown mega-dropdown">
+                            <a data-toggle="dropdown" href="#">TUNE UPS<span class="caret"></span></a>
+                            <div class="dropdown-menu">
+                                <div class="row">
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/airfilter.png" alt="" /></a>
+                                        <h5><a href="#">CABIN AIRFILTER INSTALLATION</a></h5>
+                                        <div class="price">STARTS FROM <span>Rs.1299</span></div>
+                                    </div>
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/spring.png" alt="" /></a>
+                                        <h5><a href="#">SPRING MAINTENANCE PACKAGE</a></h5>
+                                        <div class="price">STARTS FROM <span>Rs.1599</span></div>
+                                    </div>
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/engine.png" alt="" /></a>
+                                        <h5><a href="#">Test Diagnostic Service</a></h5>
+                                        <div class="price">STARTS FROM <span>Rs.999</span></div>
+                                    </div>
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/spark-plug.png" alt="" /></a>
+                                        <h5><a href="#">Spark Plug Installation</a></h5>
+                                        <div class="price">STARTS FROM <span>Rs.199</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown mega-dropdown">
+                            <a data-toggle="dropdown" href="#">Fluids<span class="caret"></span></a>
+                            <div class="dropdown-menu">
+                                <div class="row">
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/fluid-4.png" alt="" /></a>
+                                        <h5><a href="#">Fluids Exchange</a></h5>
+                                        <div class="price">STARTS FROM <span>Rs.599</span></div>
+                                    </div>
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/fluid-2.png" alt="" /></a>
+                                        <h5><a href="#">Power Steering Fluids</a></h5>
+                                        <div class="price">STARTS FROM <span>Rs.299</span></div>
+                                    </div>
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/fluid-1.png" alt="" /></a>
+                                        <h5><a href="#">Antifreeze Exchange</a></h5>
+                                        <div class="price">STARTS FROM <span>Rs.799</span></div>
+                                    </div>
+                                    <div class="col-sm-3 dropdown-item">
+                                        <a href="#"><img src="images/fluid-3.png" alt="" /></a>
+                                        <h5><a href="#">Brake Fluids</a></h5>
+                                        <div class="price">STARTS FROM <span>Rs.899</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="exc-nav-right">
+                        <li class="dropdown dropdown-custom">
+                            <a href="#"><i class="fa fa-car"></i>FREE QUOTE</a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="exc-free-quote dropdown-inner">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="exc-page-subheading">
+                                                <h2>Get a free quotation</h2>
+                                                <p>Tell us a symptom, service or repair for your car</p>
+                                            </div>
+                                        </div>
+                                        <form>
+                                            <div class="form-group col-sm-3">
+                                                <select class="form-control selectpicker">
+                                                    <option>Step 1- Make</option>
+                                                    <option>Acura</option>
+                                                    <option>Audi</option>
+                                                    <option>BMW</option>
+                                                    <option>FORD</option>
+                                                    <option>HONDA</option>
+                                                    <option>FEEP</option>
+                                                    <option>LEXUS</option>
+                                                    <option>SUZUKI</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <select class="form-control selectpicker">
+                                                    <option>Step 2 - Year</option>
+                                                    <option>2016</option>
+                                                    <option>2015</option>
+                                                    <option>2014</option>
+                                                    <option>2013</option>
+                                                    <option>2012</option>
+                                                    <option>2011</option>
+                                                    <option>2010</option>
+                                                    <option>2009</option>
+                                                    <option>2008</option>
+                                                    <option>2007</option>
+                                              </select>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <select class="form-control selectpicker">
+                                                    <option>Step 3 - Modal</option>
+                                                    <option>A3 QUATTRO</option>
+                                                    <option>A3 TDI</option>
+                                                    <option>A4</option>
+                                                    <option>A4 QUATTRO</option>
+                                                    <option>A5 QUATTRO</option>
+                                                    <option>A6</option>
+                                                    <option>A6 QUATTRO</option>
+                                                    <option>A7</option>
+                                                    <option>A8</option>
+                                                    <option>Allroad</option>
+                                                    <option>Q7</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-3">
+                                                <input class="form-control" placeholder="Step - 1 Zip Code" type="text">
+                                            </div>
+                                            <div class="form-group col-sm-12">
+                                                <textarea class="form-control" placeholder="Step 5 - Repair or service needed" rows="2"></textarea>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <a data-toggle="collapse" href="#repair-list" class="browse-repair-list"><i class="fa fa-plus"></i>Browse Repair List</a>
+                                                <a href="#" class="btn-group pull-right">
+                                                    <span class="btn">Get a quote</span>
+                                                    <span class="btn btn-arrow">
+                                                        <span class="fa fa-angle-double-right"></span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div id="repair-list" class="collapse">
+                                    <div class="exc-repair-list">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="exc-page-subheading">
+                                                    <h2>REPAIR LIST</h2>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="repair-lists">
+                                                    <h3>Brakes</h3>
+                                                    <ul class="repair-lists">
+                                                        <li><a href="#">ABS Control Module Replacement</a></li>
+                                                        <li><a href="#">ABS Wheel Speed Sensor Replacement</a></li>
+                                                        <li><a href="#">Brake Caliper Replacement - Front</a></li>
+                                                        <li><a href="#">Brake Caliper Replacement - Rear</a></li>
+                                                        <li><a href="#">Brake Master Cylinder Replacement</a></li>
+                                                        <li><a href="#">Brake Pad Replacement, Resurface Rotors</a></li>
+                                                        <li><a href="#">Brake Pad and Rotor Replacement</a></li>
+                                                        <li><a href="#">Brake Pad(s) Replacement</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="repair-lists">
+                                                    <h3>Diagnosis</h3>
+                                                    <ul class="repair-lists">
+                                                        <li><a href="#">ABS System Diagnosis</a></li>
+                                                        <li><a href="#">Air Conditioning Diagnosis</a></li>
+                                                        <li><a href="#">Charging System Diagnosis</a></li>
+                                                        <li><a href="#">Check Engine Light Diagnosis</a></li>
+                                                        <li><a href="#">Coolant Leak Diagnosis</a></li>
+                                                        <li><a href="#">Engine Oil Light Diagnosis</a></li>
+                                                        <li><a href="#">No Start Diagnosis</a></li>
+                                                        <li><a href="#">Engine Overheating Diagnosis</a></li>
+                                                        <li><a href="#">Oil Leak Diagnosis</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="close-btn close-collapse"><i class="fa fa-times"></i></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown dropdown-custom">
+                            <a href="#"><i class="fa fa-map-marker"></i>LOCATIONS</a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="exc-locations dropdown-inner">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="exc-page-subheading">
+                                                <h2>Our Locations</h2>
+                                                <p class="pull-right">We are operating in 3 cities and expanding more soon</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <address>
+                                                <span class="address-title">BIHAR</span>
+                                                <span class="address">Cabin-1, Maurya Lok<br>Patna, Bihar 800001</span>
+                                                <span class="phone-no"><i class="fa fa-phone"></i>+91-8717018534</span>
+                                                <span class="email"><i class="fa fa-envelope"></i>contact@aloautoworks.com</span>
+                                                <span class="view-map" data-toggle="collapse" data-target="#map1"><i class="fa fa-map-marker"></i>View Map</span>
+                                            </address>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <address>
+                                                <span class="address-title">JAMMU&KASHMIR</span>
+                                                <span class="address">CABIN-A,Admin Block<br>SMVDU, Jammu&Kashmir</span>
+                                                <span class="phone-no"><i class="fa fa-phone"></i>+91-8717018534</span>
+                                                <span class="email"><i class="fa fa-envelope"></i>contact@aloautoworks.com</span>
+                                                <span class="view-map" data-toggle="collapse" data-target="#map2"><i class="fa fa-map-marker"></i>View Map</span>
+                                            </address>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <address>
+                                                <span class="address-title">NEW DELHI</span>
+                                                <span class="address">Cabin-A, Innov8<br>Rajeev Chowk, New Delhi - 110068</span>
+                                                <span class="phone-no"><i class="fa fa-phone"></i>+91-8717018534</span>
+                                                <span class="email"><i class="fa fa-envelope"></i>contact@aloautoworks.com</span>
+                                                <span class="view-map" data-toggle="collapse" data-target="#map3"><i class="fa fa-map-marker"></i>View Map</span>
+                                            </address>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="map1" class="collapse map-collapse">
+                                    <div class="location-map">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.133505526799!2d-76.9829746!3d42.870026200000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d0c5141f3549a9%3A0xbdb4aae7f7f087b7!2sGeneva+St%2C+Geneva%2C+NY+14456%2C+USA!5e0!3m2!1sen!2s!4v1440679619345" allowfullscreen></iframe>
+                                    </div>
+                                    <span class="close-btn close-collapse"><i class="fa fa-times"></i></span>
+                                </div>
+                                <div id="map2" class="collapse map-collapse">
+                                    <div class="location-map">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.8985569491592!2d-92.3470462!3d34.783329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d2a3a5d147cb2b%3A0x866c1a6b8053b8a8!2sSunset+Dr%2C+Little+Rock%2C+AR+72207%2C+USA!5e0!3m2!1sen!2s!4v1440830462755" allowfullscreen></iframe>
+                                    </div>
+                                    <span class="close-btn close-collapse"><i class="fa fa-times"></i></span>
+                                </div>
+                                <div id="map3" class="collapse map-collapse">
+                                    <div class="location-map">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3519.868842971827!2d-82.776865!3d28.0895433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2f2df6febc2a1%3A0x2897289c127b7b01!2sMaryland+Ave%2C+Palm+Harbor%2C+FL+34683%2C+USA!5e0!3m2!1sen!2s!4v1440830738016" allowfullscreen></iframe>
+                                    </div>
+                                    <span class="close-btn close-collapse"><i class="fa fa-times"></i></span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Header Ends -->
+
+
+
+
+
+
+
+
+
+
+
+{% block content %}{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+    -->
+
+    <!-- Footer -->
+    <footer class="exc-footer">
+        <!-- Contact Strip -->
+        <div class="exc-contact-strip">
+            <div class="container">
+                <ul class="exc-contact-info">
+                    <li class="phone-no">
+                        <i class="fa fa-phone"></i>
+                        <h6 class="info-title">Contact Us</h6>
+                        <span class="info-desc">+91-8717018534</span>
+                    </li>
+                    <li class="email-us">
+                        <i class="fa fa-envelope"></i>
+                        <h6 class="info-title">Email Us</h6>
+                        <span class="info-desc">contact@aloautoworks.com</span>
+                    </li>
+                    <li class="opening-time">
+                        <i class="fa fa-clock-o"></i>
+                        <h6 class="info-title">We are open</h6>
+                        <span class="info-desc">Mon to Sun: <span class="open-time">12:00am</span>  - <span class="close-time">12:00pm</span></span>
+                    </li>
+                </ul>
+                <div class="exc-appointment">
+                    <a href="appointment.html" class="btn-group">
+                        <span class="btn">Book a Service</span>
+                        <span class="btn btn-arrow">
+                            <span class="fa fa-angle-double-right"></span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Widgets -->
+        <div class="exc-footer-widgets">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="widget widget-our-shop">
+                            <h3>OUR CENTRE</h3>
+                            <div class="location-map">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107086.92525422513!2d74.8617767519063!3d32.991476748088004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391e78e6089c87ed%3A0x4e7a4e7723a3acd5!2sSMVDU-Technology+Business+Incubation+Center!5e0!3m2!1sen!2sus!4v1501963140744" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            </div>
+                            <address>
+                                <span class="address">Cabin-A SMVDU,JAMMU&KASHMIR-182320</span>
+                                <span class="phone-no"><i class="fa fa-phone"></i>+91-8717018534</span>
+                                <span class="email"><i class="fa fa-envelope"></i>contact@aloautoworks.com</span>
+                            </address>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <!-- Widget Services More -->
+                        <div class="widget widget-learn-more">
+                            <h3>Our Services</h3>
+                            <ul class="widget-list">
+                                <li><a href="#">Body Work</a></li>
+                                <li><a href="#">Engine Performance</a></li>
+                                <li><a href="#">Maintenance</a></li>
+                                <li><a href="#">Evaluations</a></li>
+                                <li><a href="#">Fluid Services</a></li>
+                                <li><a href="#">Tune Ups</a></li>
+                                <li><a href="#">Battery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <!-- Widget Learn More -->
+                        <div class="widget widget-learn-more">
+                            <h3>LEARN MORE</h3>
+                            <ul class="widget-list">
+                                <li><a href="#">Tyre Information</a></li>
+                                <li><a href="#">Best in Class Brands</a></li>
+                                <li><a href="#">Video Library</a></li>
+                                <li><a href="#">Car Care</a></li>
+                                <li><a href="#">Battries</a></li>
+                                <li><a href="#">Brakes</a></li>
+                                <li><a href="#">Oils &amp; Filters</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <!-- Widget links -->
+                        <div class="widget widget-links">
+                            <h3>IMPORTAN LINKS</h3>
+                            <ul class="widget-list">
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">View All Locations</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms of Use</a></li>
+                                <li><a href="#">Site Map</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copy Right -->
+        <div class="exc-copy-right">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="copy-right">COPYRIGHT 2017 · ALL RIGHTS RESERVED</div>
+                    </div>
+                    <div class="col-sm-6">
+                        <ul class="exc-social-links">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+
+    <!-- jQuery (necessary for JavaScript plugins) -->
+    <script src="{% static 'js/jquery-1.11.3.min.js' %}"></script>
+    <script src="{% static 'js/jquery.mobile.customized.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/camera.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap-select.min.js' %}"></script>
+    <script src="{% static 'js/perfect-scrollbar.jquery.min.js' %}"></script>
+    <script src="{% static 'js/checkscript.js' %}"></script>
+     <script>
+    $(document).ready(function(){
+        {% block jquery %}
+        {% endblock %}
+    });
+
+ $(document).ready(function(){
+        {% block JavaScript %}
+        {% endblock %}
+    });
+
+    </script>
+</body>
+</html>

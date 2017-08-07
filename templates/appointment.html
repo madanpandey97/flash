@@ -1,0 +1,333 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <!-- Main Slider -->
+    <!-- Page Banner -->
+
+    <br><br>
+
+    <!-- Main -->
+    <main class="exc-main">
+        <div class="exc-page-content appointment">
+            <div class="container">
+                <div class="exc-page-title">
+                    <h1>MAKE AN APPOINTMENT</h1>
+                    <ol class="breadcrumb">
+                        <li><a href="{% url 'aloautoworks:index' %}">Home</a></li>
+                        <li class="active">Make an Appointment</li>
+                        <li>{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}</li>
+                    </ol>
+                </div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="make-appointment">
+
+         <form id="form" action="" method="post">
+                            {% csrf_token %}
+                                 <div class="form-block">
+                                    <p class="customer-care">In order for us to arrange your appointment for you, please provide essential contact information and what auto care service(s) your vehicle needs.</p>
+                                    <div class="exc-page-subheading">
+                                        <h2>NECESSARY DETAILS</h2>
+                                    </div>
+                                    <p class="privacy-policy">
+                                        <i class="fa fa-lock"></i>We take privacy and data security seriously. Click here to read our <a href="#">Privacy Policy</a>
+                                    </p>
+                                    <div class="row">
+   
+         {% csrf_token %}
+            {{ form|crispy }}
+   
+                   
+                                <div class="form-block">
+                                    <p class="block-label">
+                                        Please provide any additional information about your service request
+                                    </p>
+                                    <div class="form-group">
+                                        <textarea class="form-control" placeholder="Add a Comment (optional)" rows="10"></textarea>
+                                    </div>
+                                    <div class="btn-group">
+                                        <button class="btn" id="submit-btn">SUBMIT</button>
+                                        <span class="btn btn-arrow">
+                                            <span class="fa fa-angle-double-right"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <aside class="col-md-3">
+                        <!-- Widget Service & Installation -->
+                        <div class="widget widget-service-installation">
+                            <h3>Our Services</h3>
+                            <div id="accordion" class="exc-accordion">
+                                <!-- panel 1 -->
+                                <div class="panel">
+                                    <div class="panel-heading">
+                                        <a class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#service-1">Body Work</a>
+                                    </div>
+                                    <div id="service-1" class="collapse in">
+                                        <div class="panel-body">
+                                            <div class="service-price-desc">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Headlight Restoration</span>
+                                                            <span class="service-price"> from Rs.499</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Bulb Installation</span>
+                                                            <span class="service-price"> from Rs.159</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Cabin Air Filter Install</span>
+                                                            <span class="service-price"> from Rs.399</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Cabin Air Filter Install</span>
+                                                            <span class="service-price"> from from Rs.399</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Headlight Restoration</span>
+                                                            <span class="service-price"> from Rs.499</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- panel 2 -->
+                                <div class="panel">
+                                    <div class="panel-heading">
+                                        <a class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#service-2">Engine Performance</a>
+                                    </div>
+                                    <div id="service-2" class="collapse">
+                                        <div class="panel-body">
+                                            <div class="service-price-desc">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Headlight Restoration</span>
+                                                            <span class="service-price"> from Rs.499</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Bulb Installation</span>
+                                                            <span class="service-price"> from Rs.159</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Cabin Air Filter Install</span>
+                                                            <span class="service-price"> from Rs.399</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Cabin Air Filter Install</span>
+                                                            <span class="service-price"> from Rs.399</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Headlight Restoration</span>
+                                                            <span class="service-price"> from Rs.499</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- panel 3 -->
+                                <div class="panel">
+                                    <div class="panel-heading">
+                                        <a class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#service-3">Maintenance</a>
+                                    </div>
+                                    <div id="service-3" class="collapse">
+                                        <div class="panel-body">
+                                            <div class="service-price-desc">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Headlight Restoration</span>
+                                                            <span class="service-price"> from Rs.499</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Bulb Installation</span>
+                                                            <span class="service-price"> from Rs.159</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Cabin Air Filter Install</span>
+                                                            <span class="service-price"> from Rs.499</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Cabin Air Filter Install</span>
+                                                            <span class="service-price"> from Rs.499</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Headlight Restoration</span>
+                                                            <span class="service-price"> from Rs.499</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- panel 4 -->
+                                <div class="panel">
+                                    <div class="panel-heading">
+                                        <a class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#service-4">Evaluations</a>
+                                    </div>
+                                    <div id="service-4" class="collapse">
+                                        <div class="panel-body">
+                                            <div class="service-price-desc">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Headlight Restoration</span>
+                                                            <span class="service-price"> from Rs.499</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Bulb Installation</span>
+                                                            <span class="service-price"> from Rs.159</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Cabin Air Filter Install</span>
+                                                            <span class="service-price"> from Rs.499</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Cabin Air Filter Install</span>
+                                                            <span class="service-price"> from Rs.499</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Headlight Restoration</span>
+                                                            <span class="service-price"> from Rs.499</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- panel 5 -->
+                                <div class="panel">
+                                    <div class="panel-heading">
+                                        <a class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#service-5">Fluid Services</a>
+                                    </div>
+                                    <div id="service-5" class="collapse">
+                                        <div class="panel-body">
+                                            <div class="service-price-desc">
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Headlight Restoration</span>
+                                                            <span class="service-price"> from Rs.499</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Bulb Installation</span>
+                                                            <span class="service-price"> from Rs.159</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Cabin Air Filter Install</span>
+                                                            <span class="service-price"> from Rs.499</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Cabin Air Filter Install</span>
+                                                            <span class="service-price"> from Rs.499</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <span class="service-items">Headlight Restoration</span>
+                                                            <span class="service-price"> from Rs.499</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Widget Ad -->
+                        <div class="widget widget-ad">
+                            <img src="images/ad.jpg" alt="" />
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Main Ends -->
+
+
+
+   {% endblock %}
+
+
+<script type="text/javascript">
+    var frm = $('#contactForm1');
+
+    frm.submit(function (e) {
+
+        e.preventDefault();
+
+        $.ajax({
+            type: frm.attr('method'),
+            url: frm.attr('action'),
+            data: frm.serialize(),
+            success: function (data) {
+                console.log('Submission was successful.');
+                console.log(data);
+            },
+            error: function (data) {
+                console.log('An error occurred.');
+                console.log(data);
+            },
+        });
+    });
+</script>

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<form>
+   {% csrf_token %}
+            {{ form|crispy }}
+            <input type="submit" name=" submit">
+</form>
+
+    <!-- Main Slider -->   {% endblock %}

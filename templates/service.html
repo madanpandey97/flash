@@ -1,0 +1,361 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <!-- Main Slider -->
+
+    <!-- Page Banner -->
+    <br><br> <br><br>
+    <!-- Main -->
+    <main class="exc-main">
+        <div class="exc-page-content service">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="exc-page-title">
+                            <h1>SERVICES WE OFFER</h1>
+                            <ol class="breadcrumb">
+                                <li><a href="index.html">Home</a></li>
+                                <li class="active">Services we offer</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Services -->
+            <div class="exc-services exc-section services-page">
+                <div class="container">
+                    <ul class="services-list">
+                        <li>
+                            <div class="exc-service break-service">
+                                <div class="exc-service-desc">
+                                    <figure class="service-img">
+                                        <img src="{% static 'images/service1.jpg' %}" alt="Break Service">
+                                    </figure>
+                                    <div class="services-head-text">
+                                        <h4><a href="#">BRAKE SERVICES</a></h4>
+                                        <p class="price-start">From <strong>Rs.599</strong></p>
+                                        <div class="clearfix"></div>
+                                        <div class="service-price-desc">
+                                            <ul class="scroll-block">
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Brake System Evaluation</span>
+                                                        <span class="service-price"> Rs.799</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Replacement Pads</span>
+                                                        <span class="service-price"> from Rs.899</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Resurfacing Serviced Drum</span>
+                                                        <span class="service-price"> from Rs.699</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="exc-service maintenance">
+                                <div class="exc-service-desc">
+                                    <figure class="service-img">
+                                        <img src="{% static 'images/service2.jpg' %}" alt="Break Service">
+                                    </figure>
+                                    <div class="services-head-text">
+                                        <h4><a href="#">MAINTENANCE</a></h4>
+                                        <p class="price-start">From <strong>Rs.159</strong></p>
+                                        <div class="clearfix"></div>
+                                        <div class="service-price-desc">
+                                            <ul class="scroll-block">
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Headlight Restoration</span>
+                                                        <span class="service-price"> from Rs.499</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Bulb Installation</span>
+                                                        <span class="service-price"> from Rs.159</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Cabin Air Filter Install</span>
+                                                        <span class="service-price"> from Rs.399</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="exc-service tyre-shop">
+                                <div class="exc-service-desc">
+                                    <figure class="service-img">
+                                        <img src="{% static 'images/service3.jpg' %}" alt="Break Service">
+                                    </figure>
+                                    <div class="services-head-text">
+                                        <h4><a href="#">TYRE SHOP</a></h4>
+                                        <p class="price-start">From <strong>Rs.299</strong></p>
+                                        <div class="clearfix"></div>
+                                        <div class="service-price-desc">
+                                            <ul class="scroll-block">
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Tyre Rotation</span>
+                                                        <span class="service-price"> from Rs.399</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Flat Tyre Repair</span>
+                                                        <span class="service-price"> from Rs.299</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Tyre Balancing</span>
+                                                        <span class="service-price"> from Rs.399</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="exc-service cooling-system">
+                                <div class="exc-service-desc">
+                                    <figure class="service-img">
+                                        <img src="{% static 'images/service4.jpg' %}" alt="Break Service">
+                                    </figure>
+                                    <div class="services-head-text">
+                                        <h4><a href="#">COOLING SYSTEM SERVICE</a></h4>
+                                        <p class="price-start">From <strong>Rs.199</strong></p>
+                                        <div class="clearfix"></div>
+                                        <div class="service-price-desc">
+                                            <ul class="scroll-block">
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">A/C System Leak Evaluation</span>
+                                                        <span class="service-price"> from Rs.499</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Coolant System Evaluation</span>
+                                                        <span class="service-price"> from Rs.199</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">AC Filter Cleaning</span>
+                                                        <span class="service-price"> from Rs.259</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="exc-service tune-ups">
+                                <div class="exc-service-desc">
+                                    <figure class="service-img">
+                                        <img src="{% static 'images/service5.jpg' %}" alt="Break Service">
+                                    </figure>
+                                    <div class="services-head-text">
+                                        <h4><a href="#">TUNE UPS</a></h4>
+                                        <p class="price-start">From <strong>Rs.699</strong></p>
+                                        <div class="clearfix"></div>
+                                        <div class="service-price-desc">
+                                            <ul class="scroll-block">
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Spring Maintenance Package</span>
+                                                        <span class="service-price"> from Rs.1599</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Summer Maintenance Package</span>
+                                                        <span class="service-price"> from Rs.1399</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Winter Maintenance Package</span>
+                                                        <span class="service-price"> from Rs.799</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="exc-service airfilter">
+                                <div class="exc-service-desc">
+                                    <figure class="service-img">
+                                        <img src="{% static 'images/service6.jpg' %}" alt="Break Service">
+                                    </figure>
+                                    <div class="services-head-text">
+                                        <h4><a href="#">AIRFILTER SERVICES</a></h4>
+                                        <p class="price-start">From <strong>Rs.899</strong></p>
+                                        <div class="clearfix"></div>
+                                        <div class="service-price-desc">
+                                            <ul class="scroll-block">
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Air Filter Replacement</span>
+                                                        <span class="service-price"> from Rs.899</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Air Filter Cleaning</span>
+                                                        <span class="service-price"> from Rs.999</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Air Filter Replacement</span>
+                                                        <span class="service-price"> from Rs.799</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="exc-service drivetrain">
+                                <div class="exc-service-desc">
+                                    <figure class="service-img">
+                                        <img src="{% static 'images/service7.jpg' %}" alt="Break Service">
+                                    </figure>
+                                    <div class="services-head-text">
+                                        <h4><a href="#">DRIVETRAIN SERVICES</a></h4>
+                                        <p class="price-start">From <strong>Rs.499</strong></p>
+                                        <div class="clearfix"></div>
+                                        <div class="service-price-desc">
+                                            <ul class="scroll-block">
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Drivetrain Evaluation</span>
+                                                        <span class="service-price"> from Rs.599</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">System Evaluation</span>
+                                                        <span class="service-price"> from Rs.599</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Drivetrain Service</span>
+                                                        <span class="service-price"> from Rs.899</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="exc-service vehicle-inspection">
+                                <div class="exc-service-desc">
+                                    <figure class="service-img">
+                                        <img src="{% static 'images/service8.jpg' %}" alt="Break Service">
+                                    </figure>
+                                    <div class="services-head-text">
+                                        <h4><a href="#">VEHICLE INSPECTION</a></h4>
+                                        <p class="price-start">From <strong>Rs.199</strong></p>
+                                        <div class="clearfix"></div>
+                                        <div class="service-price-desc">
+                                            <ul class="scroll-block">
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Engine Inspection</span>
+                                                        <span class="service-price"> from Rs.199</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Safety Inspection</span>
+                                                        <span class="service-price"> from Rs.199</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Body Inspection</span>
+                                                        <span class="service-price"> from Rs.259</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="exc-service suspension">
+                                <div class="exc-service-desc">
+                                    <figure class="service-img">
+                                        <img src="{% static 'images/service9.jpg' %}" alt="Break Service">
+                                    </figure>
+                                    <div class="services-head-text">
+                                        <h4><a href="#">SUSPENSION SERVICES</a></h4>
+                                        <p class="price-start">From <strong>Rs.599</strong></p>
+                                        <div class="clearfix"></div>
+                                        <div class="service-price-desc">
+                                            <ul class="scroll-block">
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Spring Maintenance</span>
+                                                        <span class="service-price"> from Rs.599</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Full Suspension Inspection</span>
+                                                        <span class="service-price"> from Rs.459</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="service-detail.html">
+                                                        <span class="service-items">Suspension Service</span>
+                                                        <span class="service-price"> from Rs.1199</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Main Ends -->
+
+
+       {% endblock %}

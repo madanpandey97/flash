@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+
+
+
+
+
+    <main class="exc-main">
+        <div class="exc-page-content blog-detail">
+            <div class="container">
+                <div class="exc-page-title">
+                    <h1>BLOG</h1>
+                    <ol class="breadcrumb">
+                        <li><a href="{% url 'aloautoworks:index' %}">Home</a></li>
+                        <li><a href="{% url 'aloautoworks:blogs_alo' %}">Blog</a></li>
+                        <li class="active">Oil, Lube and Filter: The Three Main Pillars of Vehicle Maintenance</li>
+                    </ol>
+                </div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <article class="entry-post">
+                            <header class="entry-header">
+                                <h2 class="entry-title">Oil, Lube and Filter: The Three Main Pillars of Vehicle Maintenance</h2>
+                                <ul class="post-opts">
+                                    <li class="post-date"><i class="fa fa-calendar"></i>01/08/2017</li>
+                                    <li class="post-categories">
+                                        <i class="fa fa-bars"></i>
+                                        <a href="#">Body Shop</a>
+                                        <a href="#">Maintenance</a>
+                                    </li>
+                                    <li class="post-tags">
+                                        <i class="fa fa-tags"></i>
+                                        <a href="#">Tune ups</a>
+                                        <a href="#">Drivetrain</a>
+                                    </li>
+                                </ul>
+                            </header><!-- .entry-header -->
+                            <div class="entry-content">
+                                <ul class="minigallery three-col">
+                                    <li><a href="#"><img src="{% static 'images/blog1.jpg' %}" alt="" /></a></li>
+                                    <li><a href="#"><img src="{% static 'images/blog4.jpg' %}" alt="" /></a></li>
+                                    <li><a href="#"><img src="{% static 'images/blog5.jpg' %}" alt="" /></a></li>
+                                </ul>
+                                <p>Browse through your car’s owner’s manual and you may find the amount of components that require regular maintenance at set time or mileage intervals can be a bit intimidating.</p>
+                                <p>We are often asked what the most important maintenance items are. And without a doubt, we would say that to keep your car running at its best there are three main pillars of maintenance.</p>
+                                <blockquote>
+                                    <p>and those are oil, lube and filter.</p>
+                                </blockquote>
+                                <h3>Pillar 1: Oil</h3>
+                                <p>It’s the lifeblood of your engine. Over time however, the oil in your car collects dirt which can be carried throughout the inner workings of your engine. When this dirt builds up, your engine has to work much harder to propel your vehicle, meaning that you burn through more gasoline and end up with a greater amount of wear and tear on the engine itself. Without regular oil changes, your car’s engine simply won’t last the way that it was built to and you’ll wind up having to make some very costly repairs.</p>
+                                <ul class="minigallery singl-col">
+                                    <li><a href="#"><img src="images/blog-bi.jpg" alt="" /></a></li>
+                                </ul>
+                                <p>People often mistake “lube” as another term for oil. And while it’s understandable how they might come to that conclusion, it is not entirely correct. In the automotive world, lube actually refers to some of the other fluids besides oil which help keep your car running smoothly and safely.
+
+These include:
+
+Coolant – a fluid which protects your car from overheating
+Brake fluid – to help ensure that your brakes continue to function as they should
+Power steering – hydraulic fluid to ensure that you are easily able to maintain control of your vehicle while steering
+Transmission fluid – assists with the functions of the transmission
+Windshield wiper fluid
+Additionally, there are also other fluids which are used on joints and suspension in order to reduce wear and tear on your vehicle and keep it running smoothly.</p>
+                               
+                            </div><!-- .entry-content -->
+                        </article><!-- #post-## -->
+                    </div>
+                    <aside class="col-md-3">
+                        <!-- Widget Search -->
+                        <div class="widget widget_search">
+                            <h3>SEARCH</h3>
+                            <form method="get" id="searchform" action="http://kax/autolove/">
+                                <div class="search-wrap">
+                                    <label class="screen-reader-text" for="s">Search for:</label>
+                                    <input class="form-control" placeholder="Search Any Keyword" type="text" value="" name="s" id="s">
+                                    <input type="submit" id="searchsubmit" value="">
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Widget Calendar -->
+                        <div class="widget widget_calendar">
+                            <h3>CALENDAR</h3>
+                            <div id="calendar_wrap">
+                                <table id="wp-calendar">
+                                    <caption>AUGUST 2017</caption>
+                                    <thead>
+                                        <tr>
+                                            <th title="Monday" scope="col">M</th>
+                                            <th title="Tuesday" scope="col">T</th>
+                                            <th title="Wednesday" scope="col">W</th>
+                                            <th title="Thursday" scope="col">T</th>
+                                            <th title="Friday" scope="col">F</th>
+                                            <th title="Saturday" scope="col">S</th>
+                                            <th title="Sunday" scope="col">S</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <td id="prev" colspan="3"><a title="View posts for October 2012" href="http://roy/sound_rock/?m=201210">« Oct</a></td>
+                                            <td class="pad">&nbsp;</td>
+                                            <td class="pad" id="next" colspan="3">&nbsp;</td>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                          <td class="pad" colspan="3">&nbsp;</td><td>1</td><td>2</td><td>3</td><td>4</td>
+                                        </tr>
+                                        <tr>
+                                          <td><a title="Hello world!" href="http://roy/sound_rock/?m=20121105">5</a></td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td>
+                                        </tr>
+                                        <tr>
+                                          <td>12</td><td id="today">13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td>
+                                        </tr>
+                                        <tr>
+                                          <td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td>
+                                        </tr>
+                                        <tr>
+                                          <td>26</td><td>27</td><td>28</td><td>29</td><td>30</td>
+                                          <td colspan="2" class="pad">&nbsp;</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Widget Twitter -->
+                        <div class="widget widget_tag_cloud">
+                            <h3>Twitter</h3>
+                        </div>
+                        <!-- Widget Tag Cloud -->
+                        <div class="widget widget_tag_cloud">
+                            <h3>Tags</h3>
+                            <div class="tagcloud">
+                                <a href="#">Oil</a>
+                                <a href="#">Brake</a>
+                                <a href="#">Suspension</a>
+                                <a href="#">Engine</a>
+                                <a href="#">AC</a>
+                                <a href="#">Filter</a>
+                                <a href="#">Tyre</a>
+                                <a href="#">Accidenal repair</a>
+                                <a href="#">Tuning</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+    <!-- Main Slider -->   {% endblock %}

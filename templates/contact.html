@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <!-- Main Slider -->
+
+<br><br> <br><br>
+
+     <!-- Main -->
+    <main class="exc-main">
+        <div class="exc-page-content">
+            <div class="container">
+                <div class="exc-page-title">
+                    <h1>CONTACT US</h1>
+                    <ol class="breadcrumb">
+                        <li><a href="{% url 'aloautoworks:index' %}">Home</a></li>
+                        <li class="active">Contact</li>
+                    </ol>
+                </div>
+                <div class="row">
+                    <div class="col-md-9">
+                        <form action="" class="contact-us-form">
+                            <p class="block-label">We provide full time support to our customers so that we can serve in best way.</p>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <input class="form-control" placeholder="Full Name" type="text">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input class="form-control" placeholder="Phone Number" type="text">
+
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input class="form-control" placeholder="Subject" type="text">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input class="form-control" placeholder="Email Address" type="text">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <textarea class="form-control" placeholder="Write your message here" rows="10"></textarea>
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <div class="btn-group">
+                                        <button class="btn">SEND MESSAGE</button>
+                                        <span class="btn btn-arrow">
+                                            <span class="fa fa-angle-double-right"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <aside class="col-md-3">
+                        <!-- Widget Our Locations -->
+                        <div class="widget widget-our-locations">
+                            <h3>OUR LOCATONS</h3>
+                            <div class="location-box">
+                                <h6 class="address-title">New Delhi</h6>
+                                <figure>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9588195432716!2d77.21466881434569!3d28.630996290902836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd49de83fee5%3A0x5d8b41bc741e98d!2sInnov8+Coworking!5e0!3m2!1sen!2sin!4v1502131645615" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                </figure>
+                                <address>
+                              
+                                                <span class="address">Cabin-1, Innov8<br>Rajeev chowk, Delhi 110006</span>
+                                                <span class="phone-no"><i class="fa fa-phone"></i>+91-8717018534</span>
+                                                <span class="email"><i class="fa fa-envelope"></i>contact@aloautoworks.com</span>
+                                                <span class="view-map" data-toggle="collapse" data-target="#map1"><i class="fa fa-map-marker"></i>View Map</span>
+                                </address>
+                            </div>
+                            <div class="location-box">
+                                <h6 class="address-title">JAMMU&KASHMIR</h6>
+                                <figure>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346.4655029517075!2d74.92962861446557!3d32.991500780326746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391e78e6089c87ed%3A0x4e7a4e7723a3acd5!2sSMVDU-Technology+Business+Incubation+Center!5e0!3m2!1sen!2sin!4v1502131685164" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                </figure>
+                                <address>
+                                    <<span class="address">CABIN-A,Admin Block<br>SMVDU, Jammu&Kashmir</span>
+                                                <span class="phone-no"><i class="fa fa-phone"></i>+91-8717018534</span>
+                                                <span class="email"><i class="fa fa-envelope"></i>contact@aloautoworks.com</span>
+                                                <span class="view-map" data-toggle="collapse" data-target="#map2"><i class="fa fa-map-marker"></i>View Map</span>
+                                </address>
+                            </div>
+                            <div class="modal fade" id="map-modal">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <div class="location-map">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.133505526799!2d-76.9829746!3d42.870026200000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d0c5141f3549a9%3A0xbdb4aae7f7f087b7!2sGeneva+St%2C+Geneva%2C+NY+14456%2C+USA!5e0!3m2!1sen!2s!4v1440833331660" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="map-modal-2">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <div class="location-map">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.8985569491592!2d-92.3470462!3d34.783329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87d2a3a5d147cb2b%3A0x866c1a6b8053b8a8!2sSunset+Dr%2C+Little+Rock%2C+AR+72207%2C+USA!5e0!3m2!1sen!2s!4v1440830462755" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="map-modal-3">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <div class="location-map">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3519.868842971827!2d-82.776865!3d28.0895433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2f2df6febc2a1%3A0x2897289c127b7b01!2sMaryland+Ave%2C+Palm+Harbor%2C+FL+34683%2C+USA!5e0!3m2!1sen!2s!4v1440830738016" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Main Ends -->
+
+       {% endblock %}
