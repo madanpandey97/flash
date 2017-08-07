@@ -25,7 +25,8 @@ SECRET_KEY = '&m08b56$reww+#v285c6kz2a_%4efu#&0-ol^4klge=b4#q54o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['kpmadan.pythonanywhere.com','www.aloautoworks.com']
 
 
 # Application definition
